@@ -1,0 +1,33 @@
+<html>
+<head>
+    <link rel="stylesheet" href="/css/style.css">
+    <title>To do </title>
+    
+</head>
+<body>
+
+    <h1>liste TO DO </h1>
+    <ul>
+            <% for (var i = 0 ; i < todolist.length ; i++) { %> 
+            <li>
+                <%= todolist[i] %>
+                <a href="/todo/<%= i %>" >Delete</a>
+            </li>
+            <% } %>
+    </ul>
+
+<form action="/todo/new" method="get">
+    <label>Quels tâche devez-vous réaliser?</label>
+    <input type="text" name="todolabel" />
+    <input type="submit" name="save" value="Ajouter"/>
+</form>
+
+<form  method="POST" action="/">
+    <label>Quel est votre nom? </label>
+    <input type="text" name="myname" />
+    <input type="submit"  value="Envoyer"/>
+</form>
+
+    <img src="/image/todo.png" alt="">
+</body>
+</html>
