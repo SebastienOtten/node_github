@@ -15,6 +15,13 @@ router.get('/todo/new', (request, response) => {
     response.redirect('/')
 });
 
+
+router.get('/delete/:id', (request, response) => {
+    item = request.params.id
+    todo.splice(item,1)
+    response.redirect('/')
+});
+
 //récupérer les inputs du formulaire sur le nom
 router.post('/', (request, response) =>{
 console.log(request.body);

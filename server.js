@@ -3,9 +3,8 @@ let express = require('express');
 
 let app = express();
 
+// a écrire pour que la méthode POST fonctionne!!
 app.use(express.urlencoded());
-
-
 
 //render todo page
 //app.get('/', (request, response) => {
